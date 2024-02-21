@@ -1,24 +1,14 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
-
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+/* 
+CMS-Javascript (spa) 
+Autor: Guillermo Jiménez López
+Fecha de Actualización: 21.02.2024
+Versión: 1.1.2 -Extension Basic - Vite
+*/
+//Files import for App
+import './public/assets/bootstrap-5.0.2/css/bootstrap.min.css';
+import './public/assets/css/style.css';
+import './public/assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js';
+//Import JS
+//import { load, route } from "./src/app/functions";
+//Functions APP
+//load();
