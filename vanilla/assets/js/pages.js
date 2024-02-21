@@ -2,9 +2,7 @@ let app =  document.querySelector('#app');
 
 export const routes = {
     'home': home,
-    'pagina': pagina,
-    '/': home,
-    '/pagina': pagina
+    'pagina': pagina
 };
 
 //*HOME*****************************************************/
