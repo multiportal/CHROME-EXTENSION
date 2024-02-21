@@ -9,6 +9,6 @@ import './public/assets/bootstrap-5.0.2/css/bootstrap.min.css';
 import './public/assets/css/style.css';
 import './public/assets/bootstrap-5.0.2/js/bootstrap.bundle.min.js';
 //Import JS
-//import { load, route } from "./src/app/functions";
+import { load } from "./src/app/functions";
 //Functions APP
-//load();
+load();
