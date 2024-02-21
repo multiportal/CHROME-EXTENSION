@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Router</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pagina">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="app">
+      <h1>Mini Router Example</h1>
+      <div id="content"></div>
+    </div>
+
+    <script>
+      let app = document.querySelector("#app");
+
+      const routes = {
+        '/': home,
+        '/pagina': pagina,
+      };
+
+      //*HOME*****************************************************/
+      function home() {
+        app.innerHTML = `
+  <div>
+    <h1>HOME</h1>
+  </div>
+  `;
+      }
+
+      //*PAGINA*****************************************************/
+      function pagina() {
+        app.innerHTML = `
+  <div>
+    <h1>PAGINA</h1>
+  </div>
+`;
+      }
+
+      function route(page) {
+        routes[page]();
+      }
+
+
+      // Initial setup
+      document.addEventListener("DOMContentLoaded", () => {
+        route('/');
+
+        // Listen for changes in the URL
+        window.addEventListener("popstate", handleRouteChange);
+
+        // Set up navigation
+        const links = document.querySelectorAll("a");
+        links.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const targetRoute = link.getAttribute("href");
+            history.pushState(null, null, targetRoute);
+            route(targetRoute);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
