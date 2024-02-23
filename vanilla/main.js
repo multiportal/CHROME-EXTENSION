@@ -1,3 +1,3 @@
-import { load } from "./assets/js/functions.js";
+import { load } from "./app/functions.js";
 
 load();
